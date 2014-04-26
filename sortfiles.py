@@ -108,13 +108,13 @@ Get name 'name' of file and template 'tmpl' like 'HD' or '300'
 
     #new name format    
     if imformat == 'PNG':
-        outfile = os.path.splitext(name)[0] + tmpl + ".png"
+        outfile = os.path.splitext(name)[0] + "_" + tmpl + ".png"
     elif isinstance(imformat, int):
         #проверка второго аргумента, евляится ли 'imformat' числом
-        outfile = os.path.splitext(name)[0] + tmpl + ".jpg"
+        outfile = os.path.splitext(name)[0] + "_" + tmpl + ".jpg"
         qual=imformat
     else:
-        outfile = os.path.splitext(name)[0] + tmpl + ".jpg"
+        outfile = os.path.splitext(name)[0] + "_" + tmpl + ".jpg"
         qual=75
 
     #return 1 in to interface if image to small
